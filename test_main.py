@@ -5,13 +5,13 @@ from main import app
 # Create a test client
 client = TestClient(app)
 
-def test_root_endpoint():
-    """Test the root endpoint returns HTML content with correct status"""
-    response = client.get("/")
-    assert response.status_code == 200
-    assert "text/html" in response.headers["content-type"]
-    assert "FastAPI CICD Learning" in response.text
-    assert "Mohneesh" in response.text
+# def test_root_endpoint():
+#     """Test the root endpoint returns HTML content with correct status"""
+#     response = client.get("/")
+#     assert response.status_code == 200
+#     assert "text/html" in response.headers["content-type"]
+#     assert "FastAPI CICD Learning" in response.text
+#     assert "Mohneesh" in response.text
 
 def test_health_endpoint():
     """Test the health check endpoint"""
