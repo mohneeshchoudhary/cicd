@@ -68,7 +68,7 @@ async def root():
             <h1>🚀 FastAPI CICD Learning</h1>
             <p>Welcome to our simple FastAPI application!</p>
             <div class="highlight">This is a demo to teach students how to setup CICD Pipeline</div>
-            <p>I am Sumit who is learning it</p>
+            <p>I am Mohneesh who is learning it</p>
             <p>This application demonstrates a basic FastAPI setup that can be used for learning Continuous Integration and Continuous Deployment practices.</p>
             <div class="footer">
                 Built with FastAPI | Ready for CI/CD Pipeline

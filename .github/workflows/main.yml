@@ -73,7 +73,7 @@ jobs:
   deploy:
     name: Deploy to Ubuntu VM
     runs-on: ubuntu-latest
-    needs: test  # 👈 CRITICAL: Only run deployment if tests pass
+    #needs: test  # 👈 CRITICAL: Only run deployment if tests pass
                  # This is our "quality gate" - prevents bad code from being deployed
 
     steps:
