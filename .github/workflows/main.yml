@@ -7,8 +7,8 @@ on:
 
 jobs:
   deploy:
-    name: Deploy to Ubuntu VM
-    runs-on: ubuntu-latest
+    name: Deploy to linux VM
+    runs-on: linux-latest
 
     steps:
       # --------------------------------------------------------
@@ -37,7 +37,7 @@ jobs:
             # Define paths and repo info
             BASE_PATH=${{ secrets.PROJECT_PATH }}         # e.g., /home/azureuser
             PROJECT_DIR="$BASE_PATH/cicd"
-            REPO_URL="https://github.com/mohneeshchoudhary/cicd.git"
+            REPO_URL="https://github.com/Purvi2229/cicd.git"
 
             # --------------------------------------------------------
             # Check if repo folder exists
