@@ -116,7 +116,7 @@ jobs:
             # ========================================================================
             BASE_PATH=${{ secrets.PROJECT_PATH }}         # e.g., /home/azureuser
             PROJECT_DIR="$BASE_PATH/cicd"                 # Where our app lives
-            REPO_URL="https://github.com/mohneeshchoudhary/cicd.git"
+            REPO_URL="https://github.com/rishika-patel-1/cicd.git"
 
             # ========================================================================
             # CODE SYNCHRONIZATION - Get latest code from GitHub
