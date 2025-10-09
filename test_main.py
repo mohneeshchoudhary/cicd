@@ -8,7 +8,7 @@ client = TestClient(app)
 def test_root_endpoint():
     """Test the root endpoint returns HTML content with correct status"""
     response = client.get("/")
-    assert response.status_code == 500
+    assert response.status_code == 200
     assert "text/html" in response.headers["content-type"]
     assert "FastAPI CICD Learning" in response.text
     assert "Mohneesh" in response.text
