@@ -116,6 +116,7 @@ jobs:
             BASE_PATH=${{ secrets.PROJECT_PATH }}         # e.g., /home/azureuser
             PROJECT_DIR="$BASE_PATH/cicd"
             REPO_URL="https://github.com/Purvi2229/cicd.git"
+            
 
             # ========================================================================
             # CODE SYNCHRONIZATION - Get latest code from GitHub
@@ -130,8 +131,11 @@ jobs:
             else
               echo "🆕 Project not found. Cloning fresh repository..."
               cd "$BASE_PATH"
+              echo "into " $BASE_PATH
               git clone $REPO_URL cicd   # Clone the repository for first time
               cd cicd
+
+
             fi
 
             # ========================================================================
