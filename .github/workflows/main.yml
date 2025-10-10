@@ -31,7 +31,7 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest  # GitHub provides free Ubuntu runners
-    
+    needs: test
     steps:
       # ----------------------------------------------------------------
       # Step 1: Get the latest code from repository
