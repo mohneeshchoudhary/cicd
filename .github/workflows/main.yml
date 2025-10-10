@@ -148,13 +148,13 @@ jobs:
             # ENVIRONMENT VARIABLES - Load configuration (if exists)
             # ========================================================================
             # This is where you'd load API keys, database URLs, etc.
-            if [ -f ".env" ]; then
-              echo "🔐 Loading environment variables..."
-              export $(cat .env | xargs)     # Load variables from .env file
-            else
-              echo "⚠️ No .env file found, skipping variable loading."
-              # For production, you might want to fail here if .env is required
-            fi
+            # if [ -f ".env" ]; then
+            #   echo "🔐 Loading environment variables..."
+            #   export $(cat .env | xargs)     # Load variables from .env file
+            # else
+            #   echo "⚠️ No .env file found, skipping variable loading."
+            #   # For production, you might want to fail here if .env is required
+            # fi
 
             # ========================================================================
             # PROCESS MANAGEMENT - Stop old version before starting new one
