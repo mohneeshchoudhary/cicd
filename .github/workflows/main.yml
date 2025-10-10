@@ -123,19 +123,23 @@ jobs:
             # ========================================================================
             # Check if this is a fresh deployment or an update
            echo "starting project"
-            if [ -d "$PROJECT_DIR/.git" ]; then
-              echo "📂 Project already exists. Pulling latest changes..."
-              cd "$PROJECT_DIR"
-              git fetch origin main      # Get latest commits from GitHub
-              git reset --hard origin/main  # Reset to match GitHub exactly
-            else
-              echo "🆕 Project not found. Cloning fresh repository..."
-              cd "$BASE_PATH"
-              echo "into " $BASE_PATH
-              sudo yum install git -y
-              git clone $REPO_URL cicd   # Clone the repository for first time
-              cd cicd
-            fi
+            # if [ -d "$PROJECT_DIR/.git" ]; then
+            #   echo "📂 Project already exists. Pulling latest changes..."
+            #   cd "$PROJECT_DIR"
+            #   git fetch origin main      # Get latest commits from GitHub
+            #   git reset --hard origin/main  # Reset to match GitHub exactly
+            # else
+            #   echo "🆕 Project not found. Cloning fresh repository..."
+            #   cd "$BASE_PATH"
+            #   echo "into " $BASE_PATH
+            #   sudo yum install git -y
+            #   git clone $REPO_URL cicd   # Clone the repository for first time
+            #   cd cicd
+            # fi
+            echo " Pulling latest changes..."
+            cd "$PROJECT_DIR"
+            git fetch origin main      # Get latest commits from GitHub
+            git reset --hard origin/main  # Reset to match GitHub exactly
 
             # ========================================================================
             # PYTHON ENVIRONMENT SETUP - Create isolated Python environment
