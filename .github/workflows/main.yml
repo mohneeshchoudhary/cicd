@@ -31,7 +31,6 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest  # GitHub provides free Ubuntu runners
-    
     steps:
       # ----------------------------------------------------------------
       # Step 1: Get the latest code from repository
@@ -117,11 +116,13 @@ jobs:
             BASE_PATH=${{ secrets.PROJECT_PATH }}         # e.g., /home/azureuser
             PROJECT_DIR="$BASE_PATH/cicd"
             REPO_URL="https://github.com/Purvi2229/cicd.git"
+            
 
             # ========================================================================
             # CODE SYNCHRONIZATION - Get latest code from GitHub
             # ========================================================================
             # Check if this is a fresh deployment or an update
+           echo "starting project"
             if [ -d "$PROJECT_DIR/.git" ]; then
               echo "📂 Project already exists. Pulling latest changes..."
               cd "$PROJECT_DIR"
@@ -130,6 +131,8 @@ jobs:
             else
               echo "🆕 Project not found. Cloning fresh repository..."
               cd "$BASE_PATH"
+              echo "into " $BASE_PATH
+              sudo yum install git -y
               git clone $REPO_URL cicd   # Clone the repository for first time
               cd cicd
             fi
