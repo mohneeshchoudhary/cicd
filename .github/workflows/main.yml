@@ -121,6 +121,7 @@ jobs:
             # CODE SYNCHRONIZATION - Get latest code from GitHub
             # ========================================================================
             # Check if this is a fresh deployment or an update
+           echo "starting project"
             if [ -d "$PROJECT_DIR/.git" ]; then
               echo "📂 Project already exists. Pulling latest changes..."
               cd "$PROJECT_DIR"
