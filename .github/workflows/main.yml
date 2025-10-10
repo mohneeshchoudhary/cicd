@@ -31,7 +31,6 @@ jobs:
   test:
     name: Run Tests
     runs-on: ubuntu-latest  # GitHub provides free Ubuntu runners
-    need: test
     steps:
       # ----------------------------------------------------------------
       # Step 1: Get the latest code from repository
@@ -73,7 +72,7 @@ jobs:
   deploy:
     name: Deploy to Ubuntu VM
     runs-on: ubuntu-latest
-    #needs: test  # 👈 CRITICAL: Only run deployment if tests pass
+    needs: test  # 👈 CRITICAL: Only run deployment if tests pass
                  # This is our "quality gate" - prevents bad code from being deployed
 
     steps:
