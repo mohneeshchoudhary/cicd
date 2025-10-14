@@ -6,7 +6,7 @@ set -e
 echo "🚀 Starting deployment..."
 
 # Go to app directory
-cd /home/ec2-user/deploy
+cd /home/ec2-user/cicd
 
 # Install dependencies
 python3 -m venv venv
@@ -19,7 +19,7 @@ sleep 2
 
 # Start the app
 echo "▶️ Starting FastAPI app..."
-nohup python main.py > app.log 2>&1 &
+nohup python3 main.py > app.log 2>&1 &
 sleep 5
 
 # Check if it's working
